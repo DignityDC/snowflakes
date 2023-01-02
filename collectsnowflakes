@@ -1,0 +1,12 @@
+while true do
+wait(0.1)
+local player = game.Players.LocalPlayer
+local snowflakes = game:GetService("Workspace").Zones.Christmas.Drops.Drop:GetChildren()
+
+for i, v in pairs(snowflakes) do
+    if v.Name == "Snowflake" then
+        player.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(1) -- set any delay between teleports
+    end
+end
+end
