@@ -1,0 +1,12 @@
+while true do
+wait(0.1)
+local player = game.Players.LocalPlayer
+local hearts = game:GetService("Workspace").Zones["Valentine's"].Drops.Drop:GetChildren()
+
+for i, v in pairs(hearts) do
+    if v.Name == "Base" then
+        player.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3) -- set any delay between teleports
+    end
+end
+end
