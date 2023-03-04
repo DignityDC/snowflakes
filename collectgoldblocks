@@ -1,0 +1,12 @@
+while true do
+wait(0.1)
+local player = game.Players.LocalPlayer
+local blocks = game:GetService("Workspace").Game.Ores.GoldBlocks:GetChildren()
+
+for i, v in pairs(blocks) do
+    if v.Name == "Gold" then
+        player.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3)
+    end
+end
+end
